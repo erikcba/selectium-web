@@ -19,20 +19,21 @@
                         d="M8 7H4C2.89543 7 2 7.89543 2 9V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V9C22 7.89543 21.1046 7 20 7H16M8 7V3.6C8 3.26863 8.26863 3 8.6 3H15.4C15.7314 3 16 3.26863 16 3.6V7M8 7H16"
                         stroke="#000000" stroke-width="1.5"></path>
                 </svg>
-                <h1 class="text-2xl font-bold text-gray-800 group-hover:text-gray-950 leading-none drop-shadow-sm">
+                <h1
+                    class="md:text-2xl text-xl font-bold text-gray-800 group-hover:text-gray-950 leading-none drop-shadow-sm">
                     <span class="text-orange-500 group-hover:text-orange-600 transition-all ease-in-out"> Selectium
                     </span> <br /> Constultora
                 </h1>
             </a>
             <ul class="flex flex-row justify-end items-center gap-4 p-4">
                 <li><a href="#servicios"
-                        class="text-gray-800 hover:text-orange-500 font-normal text-lg transition-all ease-in-out">Servicios</a>
+                        class="text-gray-800 hover:text-orange-500 font-normal text-md md:text-lg transition-all ease-in-out">Servicios</a>
                 </li>
                 <li><a href="#nosotros"
-                        class="text-gray-800 hover:text-orange-500 font-normal text-lg transition-all ease-in-out">Nosotros</a>
+                        class="text-gray-800 hover:text-orange-500 font-normal text-md md:text-lg transition-all ease-in-out">Nosotros</a>
                 </li>
                 <li><a href="#"
-                        class="text-gray-800 hover:text-orange-500 font-normal text-lg transition-all ease-in-out">Vacantes</a>
+                        class="text-gray-800 hover:text-orange-500 font-normal text-md md:text-lg transition-all ease-in-out">Vacantes</a>
                 </li>
                 <li><a href="#"
                         class="bg-orange-500 hover:bg-orange-600 py-2 px-3 rounded-md font-semibold text-white font-normal text-lg  transition-all ease-in-out">Contacto</a>
@@ -41,7 +42,7 @@
         </div>
     </Nav>
     <section id="hero"
-        class="lg:h-[100vh] h-[60vh] mt-20 lg:mt-0 flex flex-col justify-center items-start bg-gradient-to-b from-white to-orange-50">
+        class="md:h-[100vh] h-auto mt-24 md:mb-0 pb-12 lg:mt-0 flex flex-col justify-center items-start bg-gradient-to-b from-white to-orange-50">
         <div class="container mx-auto flex lg:flex-row flex-col justify-center items-center lg:gap-8 gap-14 px-4">
             <div class="text-left flex flex-col gap-6 p-4 lg:w-1/2 w-full">
                 <h2 class="text-4xl md:text-5xl xl:text-6xl font-bold text-gray-800 mb-4 drop-shadow-sm">
@@ -53,7 +54,7 @@
                     Especializados en reclutamiento de talentos, ayudamos a profesionales a encontrar su próximo
                     desafío y a empresas a construir equipos de alto rendimiento.
                 </p>
-                <div class="flex flex-row justify-start items-center gap-4"">
+                <div class="flex flex-col md:flex-row justify-start items-start md:items-center gap-4"">
                     <a href=" #"
                     class="bg-orange-500 flex flex-row items-center justify-center gap-2 leading-none hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-md text-lg transition-all ease-in-out">
                     Contáctanos
@@ -106,11 +107,12 @@
             </div>
         </div>
     </section>
-    <section id="servicios" class="bg-orange-50 pb-20">
+    <section id="servicios" class="bg-orange-50 pt-12 md:pt-0 pb-20">
         <div class="container mx-auto">
             <div class="flex flex-col justify-center items-center gap-4 pb-16">
                 <h2 class="text-4xl font-bold text-gray-800 text-center drop-shadow-sm">Nuestros Servicios</h2>
-                <p class="text-gray-600 text-center text-xl w-1/2">Soluciones integrales de reclutamiento diseñadas para
+                <p class="text-gray-600 text-center text-xl w-full md:w-1/2">Soluciones integrales de reclutamiento
+                    diseñadas para
                     conectar el talento adecuado con las
                     oportunidades perfectas
                 </p>
@@ -279,7 +281,7 @@
         </div>
         <div class="container mx-auto flex flex-col justify-center items-center px-4 ">
             <div class="w-full ">
-                <div class="flex flex-row py-10 items-center justify-center gap-8 w-full ">
+                <div class="flex flex-col md:flex-row py-10 items-center justify-center gap-8 w-full ">
                     <div class="flex flex-row gap-4 items-center">
                         <div class="bg-orange-200 p-3 rounded-lg">
                             <svg class="flex-shrink-0 h-6 w-6 text-orange-500" xmlns="http://www.w3.org/2000/svg"
@@ -331,13 +333,167 @@
 
         </div>
     </section>
-    <section id="contacto" class="bg-gray-100 py-20">
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                    Empresas que confían en nosotros
+                </h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Más de 130 clientes en LATAM y Norteamérica han confiado en nuestros servicios
+                </p>
+            </div>
+
+            <div class="carousel pb-10">
+                <div class="carousel-track">
+                    <!-- Primera serie de logos -->
+                    <div class="carousel-item">
+                        <img src="./assets/assistcard.png" alt="assistcard">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/bantotal.png" alt="Oracle">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/dlocal.png" alt="Google">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/globant.png" alt="assistcard">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/lirimi.png" alt="Amazon">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/quantik.png" alt="Meta">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/santander.png" alt="IBM">
+                    </div>
+
+                    <!-- Segunda serie idéntica para el efecto infinito -->
+                    <div class="carousel-item">
+                        <img src="./assets/assistcard.png" alt="assistcard">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/bantotal.png" alt="Oracle">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/dlocal.png" alt="Google">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/globant.png" alt="assistcard">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/lirimi.png" alt="Amazon">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/quantik.png" alt="Meta">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/santander.png" alt="IBM">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel pb-10">
+                <div class="carousel-track-rev">
+                    <!-- Primera serie de logos -->
+                    <div class="carousel-item">
+                        <img src="./assets/habi.png" alt="assistcard">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/siglo21.png" alt="Oracle">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/autolab.png" alt="Google">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/frubana.png" alt="assistcard">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/qubox.png" alt="Amazon">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/onetree.png" alt="Meta">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/cedi.png" alt="IBM">
+                    </div>
+
+                    <!-- Segunda serie idéntica para el efecto infinito -->
+                    <div class="carousel-item">
+                        <img src="./assets/habi.png" alt="assistcard">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/siglo21.png" alt="Oracle">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/autolab.png" alt="Google">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/frubana.png" alt="assistcard">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/qubox.png" alt="Amazon">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/onetree.png" alt="Meta">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/cedi.png" alt="IBM">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel">
+                <div class="carousel-track">
+                    <!-- Primera serie de logos -->
+                    <div class="carousel-item">
+                        <img src="./assets/isbel.png" alt="assistcard">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/quantik.png" alt="Oracle">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/melonn.png" alt="Google">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/met.png" alt="IBM">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/kreitech.png" alt="assistcard">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/baquero.png" alt="Amazon">
+                    </div>
+
+                    <!-- Segunda serie idéntica para el efecto infinito -->
+                    <div class="carousel-item">
+                        <img src="./assets/isbel.png" alt="assistcard">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/quantik.png" alt="Oracle">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/melonn.png" alt="Google">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/met.png" alt="IBM">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/kreitech.png" alt="assistcard">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/baquero.png" alt="Amazon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacto" class="bg-gray-200 py-20">
         <div class="container mx-auto">
 
             <h2 class="text-4xl font-bold text-gray-800 text-center mb-20 drop-shadow-sm">
                 ¿Listo para encontrar el talento ideal?
             </h2>
-            <div class="flex flex-row justify-center items-center gap-8 px-4 w-full">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 px-4 w-full">
                 <form action="" class="w-full lg:w-1/2">
                     <div class="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
                         <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Contáctanos</h2>
