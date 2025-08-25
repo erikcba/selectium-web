@@ -59,6 +59,26 @@
 }
 
 /* Pausa la animación al hacer hover sobre el carrusel */
-.carousel:hover .carousel-track, .carousel:hover .carousel-track-rev {
+.carousel:hover .carousel-track,
+.carousel:hover .carousel-track-rev {
     animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+    .carousel-track {
+        -webkit-animation-duration: 40s !important;
+        animation-duration: 40s !important;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    .carousel-track-left {
+        -webkit-animation-name: scroll-left !important;
+        animation-name: scroll-left !important;
+    }
+
+    .carousel-track-right {
+        -webkit-animation-name: scroll-right !important;
+        animation-name: scroll-right !important;
+    }
 }
