@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selectium Constultora</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 
@@ -56,7 +57,7 @@
     <section id="hero"
         class="md:h-[100vh] h-auto mt-24 md:mb-0 pb-12 lg:mt-0 flex flex-col justify-center items-start bg-gradient-to-b from-white to-orange-50">
         <div class="container mx-auto flex lg:flex-row flex-col justify-center items-center lg:gap-8 gap-14 px-4">
-            <div class="text-left flex flex-col gap-6 p-4 lg:w-1/2 w-full">
+            <div data-aos="fade-right" class="text-left flex flex-col gap-6 py-4 lg:w-1/2 w-full">
                 <h2 class="text-4xl md:text-5xl xl:text-6xl font-bold text-gray-800 mb-4 drop-shadow-sm">
                     En selectium somos
                     especialistas en reclutar el
@@ -87,7 +88,7 @@
                     </a>
                 </div>
             </div>
-            <div class="relative lg:w-1/2 w-full">
+            <div data-aos="fade-left" class="relative lg:w-1/2 w-full">
                 <div class="bg-gradient-to-br from-orange-100 to-yellow-100 rounded-2xl p-8 transform rotate-3">
                     <div class="bg-white rounded-xl p-6 transform -rotate-3 shadow-xl">
                         <div class="flex items-center mb-4">
@@ -119,8 +120,8 @@
             </div>
         </div>
     </section>
-    <section id="servicios" class="bg-orange-50 pt-12 md:pt-0 pb-20">
-        <div class="container mx-auto">
+    <section  id="servicios" class="bg-orange-50 pt-12 md:pt-0 pb-20 px-4">
+        <div data-aos="fade-up" class="container mx-auto">
             <div class="flex flex-col justify-center items-center gap-4 pb-16">
                 <h2 class="text-4xl font-bold text-gray-800 text-center drop-shadow-sm">Nuestros Servicios</h2>
                 <p class="text-gray-600 text-center text-xl w-full md:w-1/2">Soluciones integrales de reclutamiento
@@ -129,7 +130,7 @@
                     oportunidades perfectas
                 </p>
             </div>
-            <div class="container mx-auto px-4">
+            <div class="container mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
                         <div class="flex flex-col items-start mb-4 gap-3">
@@ -203,7 +204,7 @@
         </div>
     </section>
     <section class="py-20 bg-gradient-to-r from-orange-500 to-yellow-500">
-        <div class="container mx-auto flex flex-col md:flex-row justify-evenly items-center md:gap-8 gap-14">
+        <div data-aos="fade-in" class="container mx-auto flex flex-col md:flex-row justify-evenly items-center md:gap-8 gap-14">
             <div class="flex flex-col justify-center items-center gap-2 ">
                 <h2 class="text-5xl font-bold drop-shadow-sm text-white">
                     500+
@@ -239,13 +240,13 @@
 
         </div>
     </section>
-    <section id="nosotros" class="bg-gradient-to-b from-orange-50 to-white py-20">
+    <section id="nosotros" class="bg-gradient-to-b from-orange-50 to-white lg:py-20 py-10">
         <div class="container mx-auto flex flex-col-reverse lg:flex-row justify-center items-center gap-8 px-4 mb-10">
-            <div class="lg:w-1/2 w-full p-4">
+            <div class="lg:w-1/2 w-full lg:p-4 py-4 px-0 ">
                 <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
                     alt="Consultoría de Recursos Humanos" class="rounded-lg shadow-lg w-full h-auto">
             </div>
-            <div class="lg:w-1/2 w-full p-4 flex flex-col justify-center items-start gap-6">
+            <div class="lg:w-1/2 w-full py-4 flex flex-col justify-center items-start gap-6">
                 <h2 class="text-4xl font-bold text-gray-800 drop-shadow-sm">Sobre Nosotros</h2>
                 <p class="text-gray-600 text-lg">
                     En Selectium ofrecemos soluciones a medida para cada cliente, entendiendo que el Talento es clave
@@ -507,7 +508,7 @@
             </h2>
             <div class="flex flex-col md:flex-row justify-center items-center gap-8 px-4 w-full">
                 <form action="" class="w-full lg:w-1/2">
-                    <div class="bg-white rounded-lg shadow-lg p-8 max-w-2xl mx-auto">
+                    <div class="bg-white rounded-lg shadow-lg md:p-8 p-4 max-w-2xl mx-auto">
                         <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Contáctanos</h2>
                         <div class="mb-4">
                             <label for="name" class="block text-gray-700 font-semibold mb-2">Nombre</label>
@@ -533,7 +534,7 @@
                     </div>
                 </form>
                 <div class="flex flex-col gap-6 lg:w-1/2 w-full">
-                    <div class="bg-white w-full rounded-xl px-8 py-6 shadow-lg">
+                    <div class="bg-white w-full rounded-xl md:px-8 px-4 py-6 shadow-lg">
                         <h3 class="text-2xl font-semibold text-gray-900 mb-6">Información de Contacto</h3>
                         <div class="space-y-6">
                             <div class="flex items-center">
@@ -586,7 +587,7 @@
                         </div>
                     </div>
                     <div
-                        class="bg-gradient-to-br from-orange-500 to-yellow-500 rounded-lg px-8 py-6 shadow shadow-lg text-white w-full">
+                        class="bg-gradient-to-br from-orange-500 to-yellow-500 rounded-lg md:px-8 px-4 py-6 shadow shadow-lg text-white w-full">
                         <h3 class="text-2xl font-semibold mb-2">Conversemos sobre tu futuro</h3>
                         <p class="text-white text-lg mb-6">Comunicate con nuestro equipo por WhatsApp</p>
                         <a href=""
@@ -606,6 +607,10 @@
             </div>
         </div>
     </section>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
