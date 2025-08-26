@@ -9,76 +9,162 @@
 .carousel {
     overflow: hidden;
     position: relative;
+    width: 100%;
+    max-width: 100vw;
+    contain: layout style paint;
+    -webkit-overflow-scrolling: touch;
 }
 
 .carousel-track {
     display: flex;
-    animation: scroll 60s linear infinite;
-    width: calc(200px * 14);
-    /* Ajusta según el número de logos */
+    width: calc(200px * 16);
+    will-change: transform;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+    contain: layout style paint;
+    /* Forzar compositing layer en Chrome */
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
-.carousel-track-rev {
-    display: flex;
-    animation: scroll 60s linear infinite reverse;
-    width: calc(200px * 14);
-    /* Ajusta según el número de logos */
+/* Chrome específicamente requiere prefijos webkit */
+.carousel-track-left {
+    -webkit-animation: scroll-left 50s linear infinite;
+    animation: scroll-left 50s linear infinite;
+}
+
+.carousel-track-right {
+    -webkit-animation: scroll-right 60s linear infinite;
+    animation: scroll-right 60s linear infinite;
+}
+
+/* Chrome suele pausar animaciones en tabs inactivos */
+@media screen {
+    .carousel-track {
+        -webkit-animation-play-state: running !important;
+        animation-play-state: running !important;
+    }
 }
 
 .carousel-item {
-    flex: 0 0 200px;
-    /* Ancho fijo para cada logo */
+    flex: 0 0 160px;
+    /* Más pequeño en móviles */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 20px;
+    padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+    .carousel-item {
+        flex: 0 0 200px;
+        padding: 0 20px;
+    }
+
+    .carousel-track {
+        width: calc(200px * 16);
+    }
+}
+
+@media (max-width: 767px) {
+    .carousel-track {
+        width: calc(160px * 16);
+    }
 }
 
 .carousel-item img {
     max-width: 160px;
     max-height: 80px;
     object-fit: contain;
-    filter: grayscale(1) opacity(0.7);
+    filter: grayscale(1) opacity(0.6);
     transition: all 0.3s ease;
 }
 
 .carousel-item:hover img {
     filter: grayscale(0) opacity(1);
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
-@keyframes scroll {
+/* Animación hacia la izquierda - Optimizada para Chrome */
+@keyframes scroll-left {
     0% {
-        transform: translateX(0);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
 
     100% {
-        transform: translateX(calc(-200px * 7));
-        /* La mitad del total */
+        -webkit-transform: translate3d(calc(-160px * 8), 0, 0);
+        transform: translate3d(calc(-160px * 8), 0, 0);
     }
 }
 
-/* Pausa la animación al hacer hover sobre el carrusel */
-.carousel:hover .carousel-track,
-.carousel:hover .carousel-track-rev {
+@media (min-width: 768px) {
+    @keyframes scroll-left {
+        0% {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        100% {
+            -webkit-transform: translate3d(calc(-200px * 8), 0, 0);
+            transform: translate3d(calc(-200px * 8), 0, 0);
+        }
+    }
+}
+
+/* Animación hacia la derecha - Optimizada para Chrome */
+@keyframes scroll-right {
+    0% {
+        -webkit-transform: translate3d(calc(-160px * 8), 0, 0);
+        transform: translate3d(calc(-160px * 8), 0, 0);
+    }
+
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media (min-width: 768px) {
+    @keyframes scroll-right {
+        0% {
+            -webkit-transform: translate3d(calc(-200px * 8), 0, 0);
+            transform: translate3d(calc(-200px * 8), 0, 0);
+        }
+
+        100% {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}
+
+.carousel:hover .carousel-track {
+    -webkit-animation-play-state: paused;
     animation-play-state: paused;
 }
 
+/* Forzar la animación en Chrome móvil */
 @media (max-width: 768px) {
     .carousel-track {
-        -webkit-animation-duration: 40s !important;
-        animation-duration: 40s !important;
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
 
-    .carousel-track-left {
-        -webkit-animation-name: scroll-left !important;
-        animation-name: scroll-left !important;
+    /* Desactivar hover en móviles para evitar conflictos */
+    .carousel:hover .carousel-track {
+        -webkit-animation-play-state: running;
+        animation-play-state: running;
     }
+}
 
-    .carousel-track-right {
-        -webkit-animation-name: scroll-right !important;
-        animation-name: scroll-right !important;
-    }
+/* Separador entre carruseles */
+.carousel-separator {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+    margin: 2rem 0;
 }
