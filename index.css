@@ -3,7 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
+    scroll-padding-top: 10rem;
+
 }
 
 .carousel {
@@ -40,6 +41,11 @@
 .carousel-track-right {
     -webkit-animation: scroll-right 60s linear infinite;
     animation: scroll-right 60s linear infinite;
+}
+
+.text-2xs{
+    font-size: 0.625rem;
+    line-height: 0.75rem;
 }
 
 /* Chrome suele pausar animaciones en tabs inactivos */
