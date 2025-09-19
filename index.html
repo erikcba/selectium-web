@@ -56,7 +56,7 @@
                     desafío y a empresas a construir equipos de alto rendimiento.
                 </p>
                 <div class="flex flex-col md:flex-row justify-start items-start md:items-center gap-4"">
-                    <a href="#contacto"
+                    <a href=" #contacto"
                     class="bg-orange-500 flex flex-row items-center justify-center gap-2 leading-none hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-md text-lg transition-all ease-in-out">
                     Contáctanos
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -273,7 +273,9 @@
                     En Selectium ofrecemos soluciones a medida para cada cliente, entendiendo que el Talento es clave
                     para el Desarrollo de la Organización. Nuestro objetivo es ayudar Empresas de todo LATAM &
                     Norteamerica en la búsqueda del mejor talento calificado. <br /> <span
-                        class="text-orange-500 font-bold">Diseñamos la estrategia para atrer al talento más calificado, ayudamos a profesionales a encontrar su próximo desafío y a las empresas a construir equipos de alto rendimiento.</span>
+                        class="text-orange-500 font-bold">Diseñamos la estrategia para atrer al talento más calificado,
+                        ayudamos a profesionales a encontrar su próximo desafío y a las empresas a construir equipos de
+                        alto rendimiento.</span>
                 </p>
                 <ul class=" text-gray-600 space-y-2">
                     <li class="flex flex-row items-center flex-shrink-0 gap-3">
@@ -526,7 +528,7 @@
                 ¿Listo para encontrar el talento ideal?
             </h2>
             <div class="flex flex-col md:flex-row justify-center items-center gap-8 px-4 w-full">
-                <form action="sendmail.php" method="POST" class="w-full lg:w-1/2">
+                <form id="contactForm" action="sendmail.php" method="POST" class="w-full lg:w-1/2">
                     <div class="bg-white rounded-lg shadow-lg md:p-8 p-4 max-w-2xl mx-auto">
                         <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Contáctanos</h2>
                         <div class="mb-4">
@@ -566,7 +568,7 @@
                                         </path>
                                     </svg>
                                 </div>
-                                <div >
+                                <div>
                                     <h4 class="font-semibold text-gray-900">Email</h4>
                                     <div class="flex flex-col md:flex-row gap-0 md:gap-2">
                                         <p class="text-gray-600">Para postulaciones: </p>
@@ -637,6 +639,29 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Evita el envío tradicional
+
+            const form = e.target;
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert('¡Mensaje enviado correctamente!');
+                        form.reset();
+                    } else {
+                        alert(data.message || 'Error al enviar el mensaje.');
+                    }
+                })
+                .catch(() => alert('Error de conexión.'));
+        });
     </script>
 </body>
 
