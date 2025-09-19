@@ -1,5 +1,5 @@
 <?php
-header("Access-Control-Allow-Origin: https://gydconsultoras.com"); // Permite todas las solicitudes (menos seguro) o especifica el origen (más seguro)
+header("Access-Control-Allow-Origin: *"); // Permite todas las solicitudes (menos seguro) o especifica el origen (más seguro)
 header("Access-Control-Allow-Methods: POST"); // Permite solo solicitudes POST
 header("Access-Control-Allow-Headers: Content-Type");
 // Verifica si los datos fueron enviados correctamente
