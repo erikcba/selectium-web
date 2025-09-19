@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validar solo los campos que existen en el formulario
     if (!empty($nombre) && !empty($email) && !empty($texto)) {
         // Configura los detalles del correo
-        $to = "info@gydconsultoras.com";
+        $to = "info@selectium.net";
         $subject = "Nuevo mensaje desde el formulario de contacto";
         
         $message = "
